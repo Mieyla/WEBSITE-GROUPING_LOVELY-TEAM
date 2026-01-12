@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Wishlist | Lovely Jewellery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+
+/* ===== GENERAL STYLES ===== */
+body {
+    margin: 0;
+    font-family: "Calisto MT", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FED7D0;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ===== NAVIGATION BAR ===== */
+header {
+    background: #fff;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #c68642;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c68642;
+}
+
+/* ===== SEARCH BAR ===== */
+.nav-search input {
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    width: 140px;
+    transition: all 0.3s ease;
+}
+
+.nav-search input:focus {
+    width: 180px;
+    border-color: #c89b3c;
+}
+
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown {
+    position: relative; /* make dropdown-menu relative to this parent */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 18px;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ===== USER ICON ===== */
+.user-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 50px 0 20px 0;
+    color: #111;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FED7D0; 
+    margin: 10px auto 0 auto;
+    border-radius: 3px;
+}
+
+/* ===== WISHLIST TABLE ===== */
+.wishlist-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+.wishlist-table th,
+.wishlist-table td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+.wishlist-table th {
+    background: #fff0f0;
+    color: #c68642;
+    font-weight: bold;
+}
+
+.wishlist-table td img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+/* ===== REMOVE BUTTON ===== */
+.remove-btn {
+    background-color: #c68642;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #a36b2d;
+}
+
+/* ===== BACK TO HOME BUTTON ===== */
+.back-btn {
+    display: block;
+    width: max-content;
+    margin: 30px auto;
+    padding: 10px 25px;
+    background: #c68642;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #a36b2d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .wishlist-table td img {
+        width: 50px;
+        height: 50px;
+    }
+    .wishlist-table th, .wishlist-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header>
+    <div class="navbar">
+        <div class="logo">Lovely Team</div>
+
+        <ul class="nav-links">
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="wishlist.html">Wish list</a></li>
+            <li class="dropdown">
+                <a href="#">Collection ▾</a>
+                <div class="dropdown-menu">
+                    <a href="rings.html">Rings</a>
+                    <a href="bracelets.html">Bracelets</a>
+                    <a href="earrings.html">Earrings</a>
+                    <a href="chains.html">Chains</a>
+                    <a href="charm.html">Charm</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About us</a></li>
+
+            <li class="nav-search">
+                <input type="text" placeholder="Search..." oninput="filterGlobalItems(this.value)">
+            </li>
+
+            <li class="user-icon"><i class="fa fa-user"></i></li>
+        </ul>
+    </div>
+</header>
+
+<!-- ===== WISHLIST SECTION ===== -->
+<section>
+    <h2 class="section-title">My Wish list 💖</h2>
+    <table class="wishlist-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="pandora1.jpg" alt="pandora1.jpg"></td>
+                <td>Pandora Bow Station Ring</td>
+                <td>RM379.00</td>
+                <td>1</td>
+                <td><button class="remove-btn">Remove</button></td>
+            </tr>
+            <tr>
+                <td><img src="pandoraear2.jpeg" alt="pandoraear2.jpeg"></td>
+                <td>Pandora Butterfly Hook Earrings</td>
+                <td>RM789.00</td>
+                <td>1</td>
+                <td><button class="remove-btn">Remove</button></td>
+            </tr>
+            <tr>
+                <td><img src="pandoracham3.jpg" alt="pandoracham3.jpg"></td>
+                <td>Pandora 14K Gold Plated 2026 Pink Sea Turtle Lab-grown Diamond Dangle Charm</td>
+                <td>RM419.00</td>
+                <td>2</td>
+                <td><button class="remove-btn">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="home page.html" class="back-btn">Back to Home</a>
+</section>
+
+</body>
+</html>

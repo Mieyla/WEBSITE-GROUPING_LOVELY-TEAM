@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wishlist | Lovely Jewellery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 style="text-align:center;">My Wishlist 💖</h2>
+
+<table class="wishlist-table">
+<thead>
+<tr>
+    <th>Image</th>
+    <th>Product</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Action</th>
+</tr>
+</thead>
+
+<tbody id="wishlistBody"></tbody>
+</table>
+
+<script>
+const user = localStorage.getItem("loggedInUser");
+if (!user) {
+    window.location.href = "login.html";
+}
+
+const wishlist = JSON.parse(
+    localStorage.getItem("wishlist_" + user)
+) || [];
+
+const tbody = document.getElementById("wishlistBody");
+
+wishlist.forEach((item, index) => {
+    tbody.innerHTML += `
+    <tr>
+        <td><img src="${item.image}" width="70"></td>
+        <td>${item.name}</td>
+        <td>${item.brand}</td>
+        <td>${item.price}</td>
+        <td>
+            <button onclick="removeItem(${index})">Remove</button>
+        </td>
+    </tr>
+    `;
+});
+
+function removeItem(index) {
+    wishlist.splice(index, 1);
+    localStorage.setItem(
+        "wishlist_" + user,
+        JSON.stringify(wishlist)
+    );
+    location.reload();
+}
+</script>
+
+</body>
+</html>

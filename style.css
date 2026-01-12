@@ -1,0 +1,875 @@
+/* ================= RESET & GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Calisto MT", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 50px 0 30px 0;
+    color: #111;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #FED7D0; /* soft pink line */
+    margin: 10px auto 0 auto;
+    border-radius: 3px;
+}
+
+.hero {
+    position: relative; /* fixed 'center' is invalid */
+    max-width: 2500px; /* width of the hero box */
+    margin: 20px auto; /* spacing from top */
+    height: 50vh; /* half of viewport height */
+    border-radius: 30px; /* rounded corners */
+    overflow: hidden; /* ensure content stays inside */
+    border: 4px solid #FED7D0; /* soft pink line around the box */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow for 3D effect */
+}
+
+/* video or image inside hero */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* full screen height */
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures video covers entire div */
+    z-index: -1; /* keeps video behind content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wishlist-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.wishlist-btn:hover {
+    background: #ffb6b0;
+    color: #fff;
+}
+
+/* ================= NAVIGATION BAR ================= */
+header {
+    background: #fff;
+    padding: 18px 60px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #c89b3c;
+}
+
+/* ===== SEARCH BAR ===== */
+.nav-search input {
+    padding: 7px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+    width: 140px;
+    transition: all 0.3s ease;
+}
+
+.nav-search input:focus {
+    width: 180px;
+    border-color: #c89b3c;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 18px;
+    font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* ===== USER ICON ===== */
+.user-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #FED7D0;
+  padding: 40px;
+  width: 420px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.modal-price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.modal-brand {
+  font-size: 14px;
+  color: #555;
+}
+
+.modal-desc {
+  margin-top: 15px;
+  line-height: 1.7;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ================= BRAND SECTIONS ================= */
+/* ================= RINGS HERO ================= */
+.rings-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px; /* adjust tinggi ikut suka */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya video cover penuh */
+    z-index: 1;
+    filter: brightness(60%);  /* 60% brightness = lebih gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff; /* teks putih supaya contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* buat teks nampak menonjol */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* ================= RINGS COLLECTION ================= */
+.rings-section {
+    padding: 90px 60px;
+    margin: 10px auto;
+    max-width: 2500px;
+    border-radius: 70px;
+    background: url("sec1.jpg") center/cover no-repeat;
+}
+
+.rings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RING CARD ================= */
+.ring-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.ring-card:hover {
+    transform: translateY(-10px);
+}
+
+.ring-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.ring-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.ring-card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+}
+
+.ring-card button:hover {
+    opacity: 0.85;
+    background: #ffb6b0;  /* lebih terang pink */
+    transform: scale(1.05); /* zoom sikit */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* shadow effect */
+    color: #fff; /* optional: change text color */
+
+}
+
+/* ================= BRAND SECTIONS ================= */
+/* ================= Bracelets HERO ================= */
+.bracelets-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px; /* adjust tinggi ikut suka */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya video cover penuh */
+    z-index: 1;
+    filter: brightness(60%);  /* 60% brightness = lebih gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff; /* teks putih supaya contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* buat teks nampak menonjol */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* ================= RINGS COLLECTION ================= */
+.bracelets-section {
+    padding: 90px 60px;
+    margin: 10px auto;
+    max-width: 2500px;
+    border-radius: 70px;
+    background: url("sec1.jpg") center/cover no-repeat;
+}
+
+.bracelets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RING CARD ================= */
+.bracelets-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.bracelets-card:hover {
+    transform: translateY(-10px);
+}
+
+.bracelets-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.bracelets-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.bracelets-card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+}
+
+.bracelets-card button:hover {
+    opacity: 0.85;
+    background: #ffb6b0;  /* lebih terang pink */
+    transform: scale(1.05); /* zoom sikit */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* shadow effect */
+    color: #fff; /* optional: change text color */
+}
+
+/* ================= BRAND SECTIONS ================= */
+/* ================= Earrings HERO ================= */
+.earrings-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px; /* adjust tinggi ikut suka */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya video cover penuh */
+    z-index: 1;
+    filter: brightness(60%);  /* 60% brightness = lebih gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff; /* teks putih supaya contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* buat teks nampak menonjol */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* ================= RINGS COLLECTION ================= */
+.earrings-section {
+    padding: 90px 60px;
+    margin: 10px auto;
+    max-width: 2500px;
+    border-radius: 70px;
+    background: url("sec1.jpg") center/cover no-repeat;
+}
+
+.earrings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RING CARD ================= */
+.earrings-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.earrings-card:hover {
+    transform: translateY(-10px);
+}
+
+.earrings-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.earrings-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.earrings-card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+}
+
+.earrings-card button:hover {
+    opacity: 0.85;
+    background: #ffb6b0;  /* lebih terang pink */
+    transform: scale(1.05); /* zoom sikit */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* shadow effect */
+    color: #fff; /* optional: change text color */
+}
+
+
+/* ================= BRAND SECTIONS ================= */
+/* ================= Chains HERO ================= */
+.chains-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px; /* adjust tinggi ikut suka */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya video cover penuh */
+    z-index: 1;
+    filter: brightness(60%);  /* 60% brightness = lebih gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff; /* teks putih supaya contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* buat teks nampak menonjol */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* ================= RINGS COLLECTION ================= */
+.chains-section {
+    padding: 90px 60px;
+    margin: 10px auto;
+    max-width: 2500px;
+    border-radius: 70px;
+    background: url("sec1.jpg") center/cover no-repeat;
+}
+
+.chains-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RING CARD ================= */
+.chains-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.chains-card:hover {
+    transform: translateY(-10px);
+}
+
+.chains-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.chains-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.chains-card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+}
+
+.chains-card button:hover {
+    opacity: 0.85;
+    background: #ffb6b0;  /* lebih terang pink */
+    transform: scale(1.05); /* zoom sikit */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* shadow effect */
+    color: #fff; /* optional: change text color */
+}
+
+
+/* ================= BRAND SECTIONS ================= */
+/* ================= harms HERO ================= */
+.charms-hero {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 350px; /* adjust tinggi ikut suka */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+#heroVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* supaya video cover penuh */
+    z-index: 1;
+    filter: brightness(60%);  /* 60% brightness = lebih gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #ffffff; /* teks putih supaya contrast */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* buat teks nampak menonjol */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-top: 15px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* ================= RINGS COLLECTION ================= */
+.charms-section {
+    padding: 90px 60px;
+    margin: 10px auto;
+    max-width: 2500px;
+    border-radius: 70px;
+    background: url("sec1.jpg") center/cover no-repeat;
+}
+
+.charms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* ================= RING CARD ================= */
+.charms-card {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.charms-card:hover {
+    transform: translateY(-10px);
+}
+
+.charms-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.charms-card h3 {
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.brand {
+    font-size: 14px;
+    color: #666;
+}
+
+.charms-card button {
+    margin-top: 14px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 20px;
+    background: #FED7D0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease; /* smooth transition for hover */
+}
+
+.charms-card button:hover {
+    opacity: 0.85;
+    background: #ffb6b0;  /* lebih terang pink */
+    transform: scale(1.05); /* zoom sikit */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* shadow effect */
+    color: #fff; /* optional: change text color */
+}
+
+/* ================= CONTACT SECTION BOX ================= */
+.contact-section-box {
+    background: #ffffff;
+    color: #111;
+    padding: 60px 80px;
+    max-width: 2500px;
+    margin: 20px auto;
+    border-radius: 70px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Flex layout */
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px; /* space between logo & text */
+    flex-wrap: wrap; /* responsive */
+}
+
+/* Logo styling */
+.contact-logo img {
+    width: 180px; /* adjust size */
+    max-width: 100%;
+}
+
+/* Text styling */
+.contact-info {
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #c89b3c;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 6px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #f0ebeb; /* new footer color */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-time {
+    margin-top: 5px;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+}

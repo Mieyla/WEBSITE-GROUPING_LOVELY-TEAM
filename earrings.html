@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LOVELY TEAM  | EARRINGS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= --><header>
+    <div class="navbar">
+        <div class="logo">Lovely Team</div>
+
+        <ul class="nav-links">
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="wishlist.html">Wish list</a></li>
+            <li class="dropdown">
+                <a href="#">Collection ▾</a>
+                <div class="dropdown-menu">
+                    <a href="rings.html">Rings</a>
+                    <a href="bracelets.html">Bracelets</a>
+                    <a href="earrings.html">Earrings</a>
+                    <a href="chains.html">Chains</a>
+                    <a href="charm.html">Charm</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="about us.html">About us</a></li>
+
+            <li class="nav-search">
+                <input type="text" placeholder="Search..." oninput="filterGlobalItems(this.value)">
+            </li>
+
+            <li class="user-icon"><i class="fa fa-user"></i></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<div class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="earringvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+        <h1>Rings Collection</h1>
+    </div>
+</div>
+
+<!-- ================= TOP BRANDS ================= -->
+<div class="section-title">Top Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="earrings-section">
+    <div class="earrings-grid">
+
+        <div class="earrings-card">
+            <img src="pandoraear1.jpeg" alt="Pandora Radiant Heart Earrings">
+            <h3>Pandora Radiant Heart Earrings</h3>
+            <p class="price">RM 859.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Radiant Heart Earrings','RM 859.00','Pandora',': Gold Plated with Crystal','one size','Gold','Daily Wear, Casual Outing','Heart-shaped design with sparkling stones surrounding a gold centre')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="pandoraear2.jpeg" alt="Pandora Butterfly Hook Earrings">
+            <h3>Pandora Butterfly Hook Earrings</h3>
+            <p class="price">RM 789.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Butterfly Hook Earrings','RM 789.00','Pandora','Gold Plated with Crystal','8–10mm wide','Gold','Daily Wear & Special Events','Butterfly design with sparkling gemstone and secure hook fastening')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="pandoraear3.jpeg" alt="Pandora Crescent Moon Stud Earrings">
+            <h3>Pandora Crescent Moon Stud Earrings</h3>
+            <p class="price">RM 629.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Crescent Moon Stud Earrings','RM 629.00','Pandora','Sterling Silver','10mm wide','Silver','Daily Wear and Gifts for anniversaries','Moon-shaped design with a timeless and elegant look')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="habibear1.jpeg" alt="Habib Butterfly Gold Earrings">
+            <h3>Habib Butterfly Gold Earrings</h3>
+            <p class="price">RM1,299.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Habib Butterfly Gold Earrings)','RM1,299.00','Habib Jewels','916 Gold','10mm wide (Habib Size)','Gold','Gifting, Special Celebrations','Elegant butterfly design crafted from premium 916 gold')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="habibear2.jpeg" alt="Habib Cat Gold Earrings">
+            <h3>Habib Cat Gold Earrings</h3>
+            <p class="price">RM 1,199.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Habib Cat Gold Earrings','RM 1,199.000','Habib Jewels','916 Gold','10mm wide (Habib Size)','Gold','Gifting and daily wear','Cute cat-shaped design crafted from genuine 916 gold')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="habibear3.jpeg" alt="Habib Floral Swirl Gold Earrings">
+            <h3>Habib Floral Swirl Gold Earrings</h3>
+            <p class="price">RM1,349.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Habib Floral Swirl Gold Earrings','RM1,349.00','Habib Jewels','916 Gold','8-10mm wide (Habib Size)','Gold','Daily Wear, Casual Styling and Special Events','Floral design with elegant swirl details crafted from premium 916 gold')">View Details</button>        </div>
+    </div>
+</section>
+
+<!-- ================= OTHER BRANDS ================= -->
+<div class="section-title">Other Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="earrings-section">
+    <div class="earrings-grid">
+
+        <div class="earrings-card">
+            <img src="Swarovskiear1.jpeg" alt="Swarovski Oval Minimal Earrings">
+            <h3>Swarovski Oval Minimal Earrings</h3>
+            <p class="price">RM 459.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Swarovski Oval Minimal Earrings','RM 459.00','Swarovski','Crystal','23mm high',' Silver','Wedding, Anniversaries, Special Ocassion','Minimal oval design with subtle crystal sparkle')">View Details</button>        
+        </div>
+
+        <div class="earrings-card">
+            <img src="Swarovskiear2.jpeg" alt="Swarovski Square Drop Earrings">
+            <h3>Swarovski Square Drop Earrings</h3>
+            <p class="price">RM 589.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Swarovski Square Drop Earrings','RM 589.00','Swarovski','Crystal','7mm width','Silver','Engagement, Anniversaries, Special Ocassion and parties','Long drop design with square-cut crystals for a graceful dangling look')">View Details</button>        
+        </div>
+
+        <div class="earrings-card">
+            <img src="swarovskiear3.jpeg" alt="Swarovski Blue Crystal Circle Earrings">
+            <h3>Swarovski Blue Crystal Circle Earrings</h3>
+            <p class="price">RM 499.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Swarovski Blue Crystal Circle Earrings','RM 499.00','Swarovski','Crystal','10mm width (Swarovski Size)','Silver with Blue','Special Ocassion, Luxury Events and meaningful celebrations','Round silver design with a vibrant blue crystal centre')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="swarovskiear4.jpeg" alt="Gold Butterfly Stud Earrings">
+            <h3>Gold Butterfly Stud Earrings</h3>
+            <p class="price">RM 1,399.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Gold Butterfly Stud Earrings','RM 1,399.00','Swarovski','Butterfly (Simple & Elegant), Gold-Tone Plated Metal with Swarovski Crystals','6mm width','Gold','Wedding, Daily Wear and Casual Styling',' Delicate butterfly design with a soft golden sparkle')">View Details</button>
+        </div>
+
+        <div class="earrings-card">
+            <img src="swarovskiear5.jpeg" alt="Swarovski Gold Crystal Circle Earrings">
+            <h3>Swarovski Gold Crystal Circle Earrings</h3>
+            <p class="price">RM 1,299.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Swarovski Gold Crystal Circle Earrings','RM 1,299.00','Swarovski','Round / Circle (Simple & Minimalist) and Gold-Tone Plated Metal ',' 10mm width','Gold','Daily Wear, Romantic Dates, Gift','These earrings combine classic round shapes with brilliant crystal accents to create a timeless and versatile accessory perfect for day‑to‑evening wear.')">View Details</button>        
+        </div>
+
+        <div class="earrings-card">
+            <img src="swarovskiear6.jpeg" alt="Swarovski Silver Plain Hoop Earrings">
+            <h3>Swarovski Silver Plain Hoop Earrings</h3>
+            <p class="price">RM 899.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Golden Ring', 'RM 299', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Swarovski Silver Plain Hoop Earrings','RM 899.00','Swarovski','Rhodium-Plated Metals','10mm high','Silver','Romantic Dates, Special Ocassion, Daily Wear and Office Wear & Minimalist Style','Pure silver hoop design with a sleek, modern finish')">View Details</button>        
+        </div>
+<!-- ================= MODAL ================= -->
+<div id="ringModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle"></h2>
+    <p class="modal-price" id="modalPrice"></p>
+    <p class="modal-brand" id="modalBrand"></p>
+
+    <ul>
+      <li><strong>Material:</strong> <span id="modalMaterial"></span></li>
+      <li><strong>Size:</strong> <span id="modalSize"></span></li>
+      <li><strong>Colour:</strong> <span id="modalColour"></span></li>
+      <li><strong>Suitable For:</strong> <span id="modalWear"></span></li>
+    </ul>
+
+    <p id="modalDesc"></p>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACT BOX ================= -->
+<section class="contact-section-box" id="contact">
+    <div class="contact-content">
+
+        <!-- Logo -->
+        <div class="contact-logo">
+            <img src="logo.jpg" alt="Lovely Jewellery Logo">
+        </div>
+
+        <!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: Lovelyteam2023@gmail.com</p>
+        <p>Phone: 019-6572648</p>
+        <p>Address: Alfayyat, pt1670,kampung Belukar, Machang, 18500 Kelantan</p>
+    </section>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Lovely Jewellery. All Rights Reserved.</p>
+    <p class="footer-time" id="malaysiaTime"></p>
+</footer>
+
+<script>
+function openModal(name, price, brand, material, size, colour, wear, desc) {
+  document.getElementById("modalTitle").innerText = name;
+  document.getElementById("modalPrice").innerText = price;
+  document.getElementById("modalBrand").innerText = brand;
+  document.getElementById("modalMaterial").innerText = material;
+  document.getElementById("modalSize").innerText = size;
+  document.getElementById("modalColour").innerText = colour;
+  document.getElementById("modalWear").innerText = wear;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("ringModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("ringModal").style.display = "none";
+}
+function updateMalaysiaTime() {
+    const options = {
+        timeZone: "Asia/Kuala_Lumpur",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+
+    const malaysiaTime = new Intl.DateTimeFormat("en-MY", options).format(new Date());
+    document.getElementById("malaysiaTime").textContent =
+        "Malaysia Time: " + malaysiaTime;
+}
+
+// Update immediately
+updateMalaysiaTime();
+
+// Update every second
+setInterval(updateMalaysiaTime, 1000);
+
+function addToWishlist(name, price, brand, img) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    wishlist.push({ name, price, brand, img });
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+    // Redirect to wishlist page
+    window.location.href = "wishlist.html";
+}
+
+
+</script>
+
+</body>
+</html>

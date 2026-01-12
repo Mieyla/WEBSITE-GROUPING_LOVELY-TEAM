@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LOVELY TEAM  | BRACELETS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style></style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="navbar">
+        <div class="logo">Lovely Team</div>
+
+        <ul class="nav-links">
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="wishlist.html">Wish list</a></li>
+            <li class="dropdown">
+                <a href="#">Collection ▾</a>
+                <div class="dropdown-menu">
+                    <a href="rings.html">Rings</a>
+                    <a href="bracelets.html">Bracelets</a>
+                    <a href="earrings.html">Earrings</a>
+                    <a href="chains.html">Chains</a>
+                    <a href="charm.html">Charm</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="about us.html">About us</a></li>
+
+            <li class="nav-search">
+                <input type="text" placeholder="Search..." oninput="filterGlobalItems(this.value)">
+            </li>
+
+            <li class="user-icon"><i class="fa fa-user"></i></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<div class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="braceletvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+        <h1>BRACELETS COLLECTION</h1>
+    </div>
+</div>
+
+<!-- ================= TOP BRANDS ================= -->
+<div class="section-title">Top Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="bracelets-section">
+    <div class="bracelets-grid">
+
+        <div class="bracelets-card">
+            <img src="1.jpeg" alt="Pandora Bow Chain Bracelet">
+            <h3>Pandora Bow Chain Bracelet</h3>
+            <p class="price">RM 1,299.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pandora Bow Chain Bracelet', ' 1,299.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Bow Station Ring','RM 1,299.00','Pandora','Sterling Silver','16CM & 18CM','Silver','Special Events & Gifts','Long Lasting Shine')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="pandorabr2.jpeg" alt="Pavé Cuban Chain Bracelet">
+            <h3>Pavé Cuban Chain Bracelet</h3>
+            <p class="price">RM 1,079.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pavé Cuban Chain Bracelet', 'RM 1,079.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Pavé Cuban Chain Bracelet','RM 1,079.00','Pandora','14k Gold','20CM','Gold','Special Events & Gifts','Trusted Quality Material')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="pandorabr3.jpeg" alt="Pandora Pink Bow Chain Bracelet">
+            <h3>Pandora Pink Bow Chain Bracelet</h3>
+            <p class="price">RM 1,079.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pandora Pink Bow Chain Bracelet', 'RM 1,079.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Pink Bow Chain Bracelet','RM 1,079.00','Pandora','Sterling Silver','16CM – 18CM','Silver with Pink','Daily Wear & Gifts','A feminine and Sweet Design')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="habibbr1.jpeg" alt="Carat Diamond Tennis Bracelet ">
+            <h3>Carat Diamond Tennis Bracelet </h3>
+            <p class="price">RM 1,210.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Carat Diamond Tennis Bracelet', 'RM 1,210.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Carat Diamond Tennis Bracelet ','RM 1,210.00','Habib Jewels','Sterling Silver','19.5 CM-21.5CM','Gold','Daily wear, Gift','Not easy to fade, not easy to damage')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="habibbr2.jpeg" alt="Pear Garnet and Diamond Bracelet ">
+            <h3>Pear Garnet and Diamond Bracelet </h3>
+            <p class="price">RM1,192.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pear Garnet and Diamond Bracelet ', 'RM1,192.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pear Garnet and Diamond Bracelet ','RM RM1,192.00','Habib Jewels','White Gold & Gemstones','18CM- 19CM','Silver White','Gifting, Special Ocassion','Premium quality that highlights true elegance.')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="habibbr3.jpeg" alt="Oro Italia Bracelet">
+            <h3>Oro Italia Bracelet</h3>
+            <p class="price">RM 3,578.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Oro Italia Bracelet', 'RM 3,578.00', 'Pandora', 'pandora1.jpg')"> ♡ Like </button>
+            <button onclick="openModal('Oro Italia Bracelet','RM 3,578.00','Habib Jewels','916/22K Gold','16CM','Rose Gold','Daily Wear, Special Events & Gifts',' Designed for durability, worn with confidence.')">View Details</button>        </div>
+    </div>
+</section>
+
+<!-- ================= OTHER BRANDS ================= -->
+<div class="section-title">Other Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="bracelets-section">
+    <div class="bracelets-grid">
+
+        <div class="bracelets-card">
+            <img src="Skbr1.jpeg" alt="Serene Heart Bracelet">
+            <h3>Serene Heart Bracelet</h3>
+            <p class="price">RM 239.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: SK Jewellery</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Serene Heart Bracelet', 'RM 239.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Serene Heart Bracelet','RM 239.00','SK Jewellery','Yellow Gold','16.5CM','Gold','Daily Wear & Gifts','An elegant bracelet that is suitable for casual or feminine styles.')">View Details</button>        </div>
+
+        <div class="bracelets-card">
+            <img src="Loveandcobr.jpeg" alt="Lamont Gold Bracelet">
+            <h3>Lamont Gold Bracelet</h3>
+            <p class="price">RM 1,084.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: LOVE & CO.</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Lamont Gold Bracelet', 'RM 1,084.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Lamont Gold Bracelet','RM 1,084.00','LOVE & CO.','10K Gold, 18K Gold','16.5CM -17CM','Gold','Daily Wear ','Elegant gold design that highlights graceful style')">View Details</button>        
+        </div>
+        <div class="bracelets-card">
+            <img src="smichaelkorsbr.jpeg" alt="Pavé Precious Bracelet">
+            <h3>Pavé Precious Bracelet</h3>
+            <p class="price">RM 569.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Michael Kors</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pavé Precious Bracelet', 'RM 569.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pavé Precious Bracelet','RM 569.00','Michael Kors','Sterling Silver','16.5CM -17CM','Silver','Daily Wear ','Simple but special, suitable for everyday styling.')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="nextmalaysiabr.jpeg " alt="Ted Baker Gold Tone Melrah Bracelet">
+            <h3>Ted Baker Gold Tone Melrah Bracelet</h3>
+            <p class="price">RM 306.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Next Malaysia</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Ted Baker Gold Tone Melrah Bracelet', 'RM 306.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Ted Baker Gold Tone Melrah Bracelet, 3.5 mm width','RM 306.00','Next Malaysia','Gold','16CM -18CM', 'Rose Gold','Daily Wear & Gift','Beauty classic gold, valuable for the long term.')">View Details</button>
+        </div>
+
+        <div class="bracelets-card">
+            <img src="fossilbr.jpeg" alt="Disk Station Two Tone Stainless Steel Bracelet ">
+            <h3>Disk Station Two Tone Stainless Steel Bracelet </h3>
+            <p class="price">RM 294.93</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Fossil </p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Disk Station Two Tone Stainless Steel Bracelet', 'RM 294.93', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Disk Station Two Tone Stainless Steel Bracelet ','RM 294.93','Fossil','Stainless Steel','16CM ','Rose Gold','Daily Wear & Gift','A perfect gift choice for loved ones or for yourself.')">View Details</button>        
+        </div>
+
+        <div class="bracelets-card">
+            <img src="Swarovskibr.jpeg" alt="Small Link Ring in Rose Gold with Diamonds">
+            <h3>Small Link Ring in Rose Gold with Diamonds</h3>
+            <p class="price">RM 647.69</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Small Link Ring in Rose Gold with Diamonds', 'RM 647.69', 'Swarovski', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Small Link Ring in Rose Gold with Diamonds','RM 647.69','Swarovski','Crystals, Rhodium plated, Crystal pearl, Zirconia','18CM – 21CM','White','Daily Wear & Gift','Suitable as a special gift for your loved ones.')">View Details</button>        
+        </div>
+<!-- ================= MODAL ================= -->
+<div id="ringModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle"></h2>
+    <p class="modal-price" id="modalPrice"></p>
+    <p class="modal-brand" id="modalBrand"></p>
+
+    <ul>
+      <li><strong>Material:</strong> <span id="modalMaterial"></span></li>
+      <li><strong>Size:</strong> <span id="modalSize"></span></li>
+      <li><strong>Colour:</strong> <span id="modalColour"></span></li>
+      <li><strong>Suitable For:</strong> <span id="modalWear"></span></li>
+    </ul>
+
+    <p id="modalDesc"></p>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACT BOX ================= -->
+<section class="contact-section-box" id="contact">
+    <div class="contact-content">
+
+        <!-- Logo -->
+        <div class="contact-logo">
+            <img src="logo.jpg" alt="Lovely Jewellery Logo">
+        </div>
+
+        <!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: Lovelyteam2023@gmail.com</p>
+        <p>Phone: 019-6572648</p>
+        <p>Address: Alfayyat, pt1670,kampung Belukar, Machang, 18500 Kelantan</p>
+    </section>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Lovely Jewellery. All Rights Reserved.</p>
+    <p class="footer-time" id="malaysiaTime"></p>
+</footer>
+
+<script>
+function openModal(name, price, brand, material, size, colour, wear, desc) {
+  document.getElementById("modalTitle").innerText = name;
+  document.getElementById("modalPrice").innerText = price;
+  document.getElementById("modalBrand").innerText = brand;
+  document.getElementById("modalMaterial").innerText = material;
+  document.getElementById("modalSize").innerText = size;
+  document.getElementById("modalColour").innerText = colour;
+  document.getElementById("modalWear").innerText = wear;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("ringModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("ringModal").style.display = "none";
+}
+
+function updateMalaysiaTime() {
+    const options = {
+        timeZone: "Asia/Kuala_Lumpur",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+
+    const malaysiaTime = new Intl.DateTimeFormat("en-MY", options).format(new Date());
+    document.getElementById("malaysiaTime").textContent =
+        "Malaysia Time: " + malaysiaTime;
+}
+
+// Update immediately
+updateMalaysiaTime();
+
+// Update every second
+setInterval(updateMalaysiaTime, 1000);
+
+function addToWishlist(name, price, brand, img) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    wishlist.push({ name, price, brand, img });
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+    // Redirect to wishlist page
+    window.location.href = "wishlist.html";
+}
+
+
+</script>
+
+</script>
+
+</body>
+</html>

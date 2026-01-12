@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lovely Jewellery | Rings</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="navbar">
+        <div class="logo">Lovely Team</div>
+
+        <ul class="nav-links">
+            <li><a href="home page.html">Home</a></li>
+            <li><a href="wishlist.html">Wish list</a></li>
+            <li class="dropdown">
+                <a href="#">Collection ▾</a>
+                <div class="dropdown-menu">
+                    <a href="rings.html">Rings</a>
+                    <a href="bracelets.html">Bracelets</a>
+                    <a href="earrings.html">Earrings</a>
+                    <a href="chains.html">Chains</a>
+                    <a href="charm.html">Charm</a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="about us.html">About us</a></li>
+
+            <li class="nav-search">
+                <input type="text" placeholder="Search..." oninput="filterGlobalItems(this.value)">
+            </li>
+
+            <li class="user-icon"><i class="fa fa-user"></i></li>
+        </ul>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<div class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="ringvideo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+        <h1>RINGS COLLECTION</h1>
+    </div>
+</div>
+
+<!-- ================= TOP BRANDS ================= -->
+
+<div class="section-title">Top Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="rings-section">
+    <div class="rings-grid">
+
+        <div class="ring-card">
+            <img src="pandora1.jpg" alt="Pandora Bow Station Ring">
+            <h3>Pandora Bow Station Ring</h3>
+            <p class="price">RM379.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pandora Bow Station Ring', 'RM379.00', 'Pandora', 'pandora1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora Bow Station Ring','RM379.00','Pandora','Sterling Silver','48 MM – 60 MM','Silver','Daily Wear, Casual Outing','✨ High-Quality Metal with Silver Finishing')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="pandora2.jpg" alt="Pandora Essence 14K Gold Plated Rippled Wide Band Ring">
+            <h3>Pandora Essence 14K Gold Plated Rippled Wide Band Ring</h3>
+            <p class="price">RM539.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pandora Essence 14K Gold Plated Rippled Wide Band Ring', 'RM 539.00', 'Pandora', 'pandora2.jpg')"> ♥ Like
+            </button>
+            <button onclick="openModal('Pandora Essence 14K Gold Plated Rippled Wide Band Ring','RM539.00','Pandora','14k Gold Plating','50 MM – 60 MM','Gold','Special Ocassion','💍 This ring adds elegance and sophistication to any formal look')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="pandora3.jpg" alt="Pandora 14K Rose Gold Plated Double Band Heart Ring">
+            <h3>Pandora 14K Rose Gold Plated Double Band Heart Ring</h3>
+            <p class="price">RM539.00</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Pandora</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pandora 14K Rose Gold Plated Double Band Heart Ring', 'RM539.00', 'Pandora', 'pandora3.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pandora 14K Rose Gold Plated Double Band Heart Ring','RM539.00','Pandora','14k Rose Gold Plating','52 MM – 60 MM','Rose Gold','Engagement, Weddings, Anniversaries',' Symbolize elegance and timeless beauty, perfect for meaningful moments')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="habib1.jpg" alt="Oro Italia 916 Yellow and White Gold Ring GR53481223(YW)-BI (22K Gold)">
+            <h3>Oro Italia 916 Yellow and White Gold Ring GR53481223(YW)-BI (22K Gold)</h3>
+            <p class="price">RM1,665.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Oro Italia 916 Yellow and White Gold Ring GR53481223(YW)-BI (22K Gold)', 'RM1,665.00', 'Habib Jewels', 'habib1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Oro Italia 916 Yellow and White Gold Ring GR53481223(YW)-BI (22K Gold)','RM1,665.00','Habib Jewels','916/22K Yellow and White Gold','10 – 22 (Habib Size)','Gold','Gifting, Special Celebrations','Suitable for gifting on special celebrations')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="habib2.jpg" alt="Oro Italia 916/22K White and Yellow Gold Ring GR48360822(YW)-BI">
+            <h3>Oro Italia 916/22K White and Yellow Gold Ring GR48360822(YW)-BI</h3>
+            <p class="price">RM1,192.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Oro Italia 916/22K White and Yellow Gold Ring GR48360822(YW)-BI', 'RM 1,192.00', 'Habib Jewels', 'habib2.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Oro Italia 916/22K White and Yellow Gold Ring GR48360822(YW)-BI','RM1,192.00','Habib Jewels','916/22K White and Yellow Gold','10 – 24 (Habib Size)','Gold','Gifting, Special Ocassion','Thoughtful gifting for loved ones')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="habib3.jpg" alt="Oro Italia 916 Rose Gold Ring GR47300123(R) (22K Gold)">
+            <h3>Oro Italia 916 Rose Gold Ring GR47300123(R) (22K Gold)</h3>
+            <p class="price">RM1,692.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Habib Jewels</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Oro Italia 916 Rose Gold Ring GR47300123(R) (22K Gold)', 'RM 1,692.00', 'Habib Jewels', 'habib3.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Oro Italia 916 Rose Gold Ring GR47300123(R) (22K Gold)','RM1,692.00','Habib Jewels','916/22K Gold','10 – 22 (Habib Size)','Rose Gold','Daily Wear, Casual Styling','♡ Designed to complement everyday elegance with comfort and style')">View Details</button>        </div>
+    </div>
+</section>
+
+<!-- ================= OTHER BRANDS ================= -->
+<div class="section-title">Other Brands</div>
+<!-- RINGS COLLECTION -->
+<section class="rings-section">
+    <div class="rings-grid">
+
+        <div class="ring-card">
+            <img src="dr1.jpg" alt="Triple Rows Luxury Wedding Ring For Woman">
+            <h3>Triple Rows Luxury Wedding Ring For Woman</h3>
+            <p class="price">US$5,150</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Darry Ring</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Triple Rows Luxury Wedding Ring For Woman', 'US$5,150', 'Darry Ring', 'dr1.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Triple Rows Luxury Wedding Ring For Woman','US$5,150','Darry Ring','18K Gold','3.5 – 11 (US Size)','Gold, Silver, Rose Gold','Wedding, Anniversaries, Special Ocassion','♡ Designed to elevate romantic moments with timeless beauty')">View Details</button>        </div>
+
+        <div class="ring-card">
+            <img src="dr2.jpg" alt="Heart shaped Halo Micro-Suspension Pavé Engagement Ring">
+            <h3>Heart shaped Halo Micro-Suspension Pavé Engagement Ring</h3>
+            <p class="price">US$1,550</p>
+            <div class="rating">★★★★★</div>
+            <p class="brand">Brand: Darry Ring</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Heart shaped Halo Micro-Suspension Pavé Engagement Ring', 'US$1,550', 'Darry Ring', 'dr2.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Heart shaped Halo Micro-Suspension Pavé Engagement Ring','US$1,550','Darry Ring','14K Gold, 18K Gold, Platinum','3 - 13 (US Size)','Gold, Silver, Rose Gold','Engagement, Anniversaries, Special Ocassion','♡ Designed to celebrate a love story in the making')">View Details</button>        
+        </div>
+        <div class="ring-card">
+            <img src="swarovski.jpg" alt="Hyperbola ring">
+            <h3>Hyperbola ring</h3>
+            <p class="price">RM999.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Swarovski</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Hyperbola Ring', 'RM 999', 'Swarovski', 'swarovski.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Hyperbola Ring','RM999.00','Swarovski','Rhodium Plated, Zirconia','50 – 60 (Swarovski Size)','White','Special Ocassion, Luxury Events','💎 Meticulously finished to deliver a high-end appearance.')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="cartier.jpg" alt="1895 wedding band, 3.5 mm width">
+            <h3>1895 wedding band, 3.5 mm width</h3>
+            <p class="price">$1,310</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Cartier</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('1895 wedding band', '$1,310', 'Cartier', 'cartier.jpg')"> ♥ Like </button>
+            <button onclick="openModal('1895 wedding band, 3.5 mm width','US$1,310','Cartier','18K Gold, Platinum 950/1000','44 MM – 72 MM','Yellow Gold, Platinum, Pink Gold','Wedding, Daily Wear, Casual Styling','Designed to move seamlessly from everyday wear to meaningful moments')">View Details</button>
+        </div>
+
+        <div class="ring-card">
+            <img src="dw.jpg" alt="Pavé Ring Rose Gold 5 mm">
+            <h3>Pavé Ring Rose Gold 5 mm</h3>
+            <p class="price">RM490.00</p>
+            <div class="rating">★★★★☆</div>
+            <p class="brand">Brand: Daniel Wellington</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Pavé Ring Rose Gold 5 mm', 'RM490.00', 'Daniel Wellington', 'dw.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Pavé Ring Rose Gold 5 mm','RM490.00','Daniel Wellington','Cubic Zirconia Crystal set in Gold, Rose Gold and Rhodium plated brass','48  – 60 (European Size) ','Gold, Rose Gold, Silver','Daily Wear, Romantic Dates, Gift','Perfect for daily wear and cherished moments like dates with your loved ones')">View Details</button>        
+        </div>
+
+        <div class="ring-card">
+            <img src="tc.jpg" alt="Small Link Ring in Rose Gold with Diamonds">
+            <h3>Small Link Ring in Rose Gold with Diamonds</h3>
+            <p class="price">RM25,400.00</p>
+            <div class="rating">★★★☆☆</div>
+            <p class="brand">Brand: Tiffany&Co.</p>
+            <button class="wishlist-btn"
+            onclick="addToWishlist('Small Link Ring in Rose Gold with Diamonds', 'RM25,400.00', 'Tiffany&Co', 'tc.jpg')"> ♥ Like </button>
+            <button onclick="openModal('Small Link Ring in Rose Gold with Diamonds','RM25,400.00','Tiffany&Co.','18K Rose Gold with Diamonds','3 – 13 US Size','Rose Gold','Romantic Dates, Special Ocassion, Daily Wear','Everyday elegance meets subtle sparkle for life’s special moments')">View Details</button>        
+        </div>
+<!-- ================= MODAL ================= -->
+<div id="ringModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle"></h2>
+    <p class="modal-price" id="modalPrice"></p>
+    <p class="modal-brand" id="modalBrand"></p>
+
+    <ul>
+      <li><strong>Material:</strong> <span id="modalMaterial"></span></li>
+      <li><strong>Size:</strong> <span id="modalSize"></span></li>
+      <li><strong>Colour:</strong> <span id="modalColour"></span></li>
+      <li><strong>Suitable For:</strong> <span id="modalWear"></span></li>
+    </ul>
+
+    <p id="modalDesc"></p>
+  </div>
+</div>
+</section>
+
+<!-- ================= CONTACT BOX ================= -->
+<section class="contact-section-box" id="contact">
+    <div class="contact-content">
+
+        <!-- Logo -->
+        <div class="contact-logo">
+            <img src="logo.jpg" alt="Lovely Jewellery Logo">
+        </div>
+
+        <!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: Lovelyteam2023@gmail.com</p>
+        <p>Phone: 019-6572648</p>
+        <p>Address: Alfayyat, pt1670,kampung Belukar, Machang, 18500 Kelantan</p>
+    </section>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Lovely Jewellery. All Rights Reserved.</p>
+    <p class="footer-time" id="malaysiaTime"></p>
+</footer>
+
+<script>
+function openModal(name, price, brand, material, size, colour, wear, desc) {
+  document.getElementById("modalTitle").innerText = name;
+  document.getElementById("modalPrice").innerText = price;
+  document.getElementById("modalBrand").innerText = brand;
+  document.getElementById("modalMaterial").innerText = material;
+  document.getElementById("modalSize").innerText = size;
+  document.getElementById("modalColour").innerText = colour;
+  document.getElementById("modalWear").innerText = wear;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("ringModal").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("ringModal").style.display = "none";
+}
+
+function updateMalaysiaTime() {
+    const options = {
+        timeZone: "Asia/Kuala_Lumpur",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    };
+
+    const malaysiaTime = new Intl.DateTimeFormat("en-MY", options).format(new Date());
+    document.getElementById("malaysiaTime").textContent =
+        "Malaysia Time: " + malaysiaTime;
+}
+
+// Update immediately
+updateMalaysiaTime();
+
+// Update every second
+setInterval(updateMalaysiaTime, 1000);
+
+function addToWishlist(name, price, brand, img) {
+    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+    wishlist.push({ name, price, brand, img });
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+    // Redirect to wishlist page
+    window.location.href = "wishlist.html";
+}
+
+
+
+</script>
+
+</body>
+</html>
